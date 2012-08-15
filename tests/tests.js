@@ -43,7 +43,7 @@ asyncTest('异步加载', 3, function () {
 
 module('授权管理');
 asyncTest('登录与授权', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.tokenReady(function () {
         if (!T.loginStatus()) {
             T.login(function (loginstatus) {
@@ -87,7 +87,7 @@ test('登出',2, function () {
 
 module('获取微博数据');
 asyncTest('广播大厅前20条，返回JSON对象，GET方式', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.api('statuses/public_timeline',{reqnum:20})
      .success(function (data) {
          expect(3);
@@ -104,7 +104,7 @@ asyncTest('广播大厅前20条，返回JSON对象，GET方式', function () {
      });
 });
 asyncTest('广播大厅前20条，返回JSON对象，POST方式', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.api('statuses/public_timeline',{reqnum:20},'json','post')
      .success(function (data) {
          expect(3);
@@ -121,7 +121,7 @@ asyncTest('广播大厅前20条，返回JSON对象，POST方式', function () {
      });
 });
 asyncTest('广播大厅前20条，XML格式', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.api('statuses/public_timeline',{reqnum:20},'xml')
      .success(function (data) {
          expect(3);
@@ -138,7 +138,7 @@ asyncTest('广播大厅前20条，XML格式', function () {
      });
 });
 asyncTest('广播大厅前20条，纯文本格式', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.api('statuses/public_timeline',{reqnum:20},'text')
      .success(function (data) {
          expect(3);
@@ -155,7 +155,7 @@ asyncTest('广播大厅前20条，纯文本格式', function () {
      });
 });
 asyncTest('用户资料', function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     var main = function () {
         T.api('user/info')
          .success(function (data) {
@@ -186,7 +186,7 @@ asyncTest('用户资料', function () {
 module("事件");
 asyncTest('tokenReady', function () {
     expect(1);
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.tokenReady(function () {
         ok(true,'回调函数被调用');
         start();
@@ -201,7 +201,7 @@ asyncTest('documentReady', function () {
 });
 asyncTest('ready', function () {
     expect(1);
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.ready(function () {
         ok(true,'回调函数被调用');
         start();
