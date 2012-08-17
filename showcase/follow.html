@@ -10,7 +10,7 @@ HTML部分：
 JS部分：
 
     T.init({                                                                                 |    初始化
-        appkey: 801124054,                                                                   |    指定appkey
+        appkey: 801215582,                                                                   |    指定appkey
         pingback: false                                                                      |    不向服务器发送报告
     });                                                                                      |    
                                                                                              |    
@@ -42,4 +42,4 @@ JS部分：
         });                                                                                  |                       
         return false;                                                                        |    阻止浏览器响应href
     }                                                                                        |    
-</pre> </p> <script src="//mat1.gtimg.com/app/openjs/openjs.js#debug=yes"></script> <script>T.init({appkey:801124054,pingback:false});if(T.loginStatus()){T.task(T.api("friends/check",{names:"api_weibo",flag:1}),T.api("user/other_info",{name:"api_weibo"})).success(function(e,d){var c=T.find("#status")[0];var a=e[0].data.api_weibo;var b=d[0].data.fansnum;c.innerHTML=(a?"已收听":"未收听")+"，听众"+b+"人";if(a){c.className="green"}})}function follow(){if(!T.loginStatus()){T.login(follow);return}T.api("friends/add",{name:"api_weibo"},"json","post").success(function(){alert("收听成功")}).error(function(b,a){alert("收听失败"+a)});return false};</script> </body> </html>
+</pre> </p> <script src="//mat1.gtimg.com/app/openjs/openjs.js#debug=yes"></script> <script>T.init({appkey:801215582,pingback:false});if(T.loginStatus()){T.task(T.api("friends/check",{names:"api_weibo",flag:1}),T.api("user/other_info",{name:"api_weibo"})).success(function(e,d){var c=T.find("#status")[0];var a=e[0].data.api_weibo;var b=d[0].data.fansnum;c.innerHTML=(a?"已收听":"未收听")+"，听众"+b+"人";if(a){c.className="green"}})}function follow(){if(!T.loginStatus()){T.login(follow);return}T.api("friends/add",{name:"api_weibo"},"json","post").success(function(){alert("收听成功")}).error(function(b,a){alert("收听失败"+a)});return false};</script> </body> </html>
