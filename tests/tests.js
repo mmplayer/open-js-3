@@ -116,7 +116,7 @@ asyncTest('登录与授权', function () {
 });
 
 asyncTest('登出',function () {
-    T.init({appkey:801124054,callbackurl:'./callback.html'});
+    T.init({appkey:801215582,callbackurl:'./callback.html'});
     T.tokenReady(function () {
         expect(2);
         if (T.loginStatus()) {
